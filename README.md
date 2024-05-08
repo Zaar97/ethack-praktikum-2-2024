@@ -1,1 +1,2 @@
-# ethack-praktikum-2-2024
+# Azzahra Sekar Rahmadina
+5027221035
