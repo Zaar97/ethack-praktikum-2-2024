@@ -1,0 +1,40 @@
+# Nmap 7.80 scan initiated Tue May  7 23:00:07 2024 as: nmap -T4 --min-rate 10000 -sCV -p- -A -Pn -oN nmap1 10.15.42.36
+Warning: 10.15.42.36 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.15.42.36
+Host is up (0.20s latency).
+Not shown: 65437 closed ports, 95 filtered ports
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 2.0.8 or later
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV IP 172.18.0.3 is not the same as 10.15.42.36
+| ftp-syst:
+|   STAT:
+| FTP server status:
+|      Connected to 10.33.2.178
+|      Logged in as ftp
+|      TYPE: ASCII
+|      Session bandwidth limit in byte/s is 6250000
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.5 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+8888/tcp open  http    Apache httpd 2.4.38 ((Debian))
+|_http-server-header: Apache/2.4.38 (Debian)
+|_http-title: Login Page
+Aggressive OS guesses: Linux 2.6.32 (92%), Linux 3.1 (91%), Linux 3.2 (91%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (90%), Linux 2.6.39 - 3.2 (89%), Linux 3.1 - 3.2 (89%), Linux 3.11 (89%), Linux 3.2 - 4.9 (89%), Linux 3.5 (89%), Linux 3.7 - 3.10 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 8 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 28343/tcp)
+HOP RTT       ADDRESS
+1   1.08 ms   LAPTOP-R5205RP2.mshome.net (172.19.0.1)
+2   308.54 ms 10.33.0.1
+3   ... 7
+8   308.75 ms 10.15.42.36
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  7 23:01:01 2024 -- 1 IP address (1 host up) scanned in 53.88 seconds
